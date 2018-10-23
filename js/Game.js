@@ -77,11 +77,5 @@ class Game {
     const newPhrase = this.getRandomPhrase();
     newPhrase.addPhraseToDisplay(newPhrase.phrase);
     this.missed = 0;
-
-
-
-
-
   }
-
 }
