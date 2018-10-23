@@ -4,16 +4,16 @@
 /* Variables */
 
 :root {
-  --color-win: #78CF82;
-  --color-lose: #D94545;
-  --color-start: #5b85b7;
-  --color-neutral: #445069;
-  --color-neutral-light: #D2D2D2;
-  --color-keys: #37474F;
-  --color-keys-light: #E5E5E5;
-  --font-size-large: 60px;
-  --font-size-medium: 20px;
-  --transition: all .2s ease-in-out;
+  color-win: rgb(0, 0, 0);
+  color-lose: rgb(41, 38, 38);
+  color-start: #5b85b7;
+  color-neutral: rgb(35, 122, 17);
+  color-neutral-light: #D2D2D2;
+  color-keys: rgb(35, 122, 17);
+  color-keys-light: #E5E5E5;
+  font-size-large: 60px;
+  font-size-medium: 20px;
+  transition: all .2s ease-in-out;
 }
 
 /* main */
@@ -52,7 +52,7 @@ button {
   padding: .5rem 1rem;
   color: var(--color-keys);
   font-size: var(--font-size-medium);
-  background-color: var(--color-keys-light);
+  background-color: rgb(116, 136, 117);
   border-radius: 5px;
   -webkit-transition: var(--transition);
   -o-transition: var(--transition);
@@ -99,7 +99,7 @@ button {
   padding: 20px 1px 0 1px;
   margin-right: 2px;
   color: transparent;
-  background: var(--color-neutral-light);
+  background: lightgrey;
   border-radius: 5px;
 }
 
@@ -131,21 +131,21 @@ button {
 }
 
 .chosen {
-  background: #3a3f58;
+  background: rgb(35, 122, 17);
   border-radius: 5px;
   font-size: var(--font-size-medium);
   color: #FFFFFF;
 }
 
 .wrong {
-  background: #f7a964;
+  background: #b40000;
   color: #FFFFFF;
 }
 
 .btn__reset {
   padding: 16px;
   margin: 50px auto;
-  background: #f7a964;
+  background: #ffffff;
   border-radius: 5px;
   font-size: 20px;
   cursor: pointer;
@@ -166,7 +166,7 @@ button {
   display: flex;
   flex-direction: column;
   position: fixed;
-  color: #FFFFFF;
+  color: rgb(3, 3, 3);
   justify-content: center;
   top: 0;
   bottom: 0;
@@ -180,7 +180,7 @@ button {
 }
 
 .start {
-  background-color: #3a3f58;
+  background-color: #42475f;
 }
 
 .start a {
@@ -188,7 +188,7 @@ button {
 }
 
 .win {
-  background-color: var(--color-win);
+  background-color: #42475f;
 }
 
 .win a {
@@ -196,7 +196,7 @@ button {
 }
 
 .lose {
-  background-color: #f5785f;
+  background-color: #42475f;
 }
 
 .lose a {
