@@ -6,6 +6,6 @@ This is a game where you have to guess a random phrase. Quess a letter wrong 5 t
 * JavaScript
 * ES6
 * DOM manipulation
-
+k
 
   
