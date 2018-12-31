@@ -4,13 +4,6 @@
 /* Variables */
 
 :root {
-  color-win: rgb(0, 0, 0);
-  color-lose: rgb(41, 38, 38);
-  color-start: #5b85b7;
-  color-neutral: rgb(35, 122, 17);
-  color-neutral-light: #D2D2D2;
-  color-keys: rgb(35, 122, 17);
-  color-keys-light: #E5E5E5;
   font-size-large: 60px;
   font-size-medium: 20px;
   transition: all .2s ease-in-out;
@@ -47,17 +40,32 @@ h1 {
 }
 
 button {
-  margin: 6px;
-  border: 1px solid transparent;
-  padding: .5rem 1rem;
-  color: var(--color-keys);
-  font-size: var(--font-size-medium);
-  background-color: rgb(116, 136, 117);
-  border-radius: 5px;
-  -webkit-transition: var(--transition);
-  -o-transition: var(--transition);
-  transition: var(--transition);
-  cursor: pointer;
+  border-top: 1px solid #abe0ff;
+  background: #35576e;
+  background: -webkit-gradient(linear, left top, left bottom, from(#263361), to(#35576e));
+  background: -webkit-linear-gradient(top, #263361, #35576e);
+  background: -moz-linear-gradient(top, #263361, #35576e);
+  background: -ms-linear-gradient(top, #263361, #35576e);
+  background: -o-linear-gradient(top, #263361, #35576e);
+  padding: 11px 22px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+  text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
+  color: white;
+  font-size: 22px;
+  font-family: Helvetica, Arial, Sans-Serif;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+button:active {
+  background-color: #7e808d;
+  box-shadow: 2px 2px 4px #000000;
+  transform: translateY(2px);
 }
 
 #btn__reset {
@@ -83,12 +91,9 @@ button {
   margin-top: 15px;
 }
 
-/* Title */
-
 .header {
   color: #3a3f58;
 }
-
 
 /* Phrase */
 
@@ -101,13 +106,13 @@ button {
   color: transparent;
   background: lightgrey;
   border-radius: 5px;
+  border: 1px solid rgb(114, 114, 114)
+
 }
 
 .space {
   width: 15px;
 }
-
-
 
 .show {
   color: #fff;
@@ -122,7 +127,6 @@ button {
   animation-duration: .5s;
 }
 
-
 /* Keyboard */
 
 .keyrow {
@@ -132,8 +136,6 @@ button {
 
 .chosen {
   background: rgb(35, 122, 17);
-  border-radius: 5px;
-  font-size: var(--font-size-medium);
   color: #FFFFFF;
 }
 
@@ -145,7 +147,7 @@ button {
 .btn__reset {
   padding: 16px;
   margin: 50px auto;
-  background: #ffffff;
+  background: #740000;
   border-radius: 5px;
   font-size: 20px;
   cursor: pointer;
@@ -159,14 +161,13 @@ button {
   border-right: solid 3px rgba(0, 0, 0, 0);
 }
 
-
 /* Overlay */
 
 #overlay {
   display: flex;
   flex-direction: column;
   position: fixed;
-  color: rgb(3, 3, 3);
+  color: rgb(0, 0, 0,);
   justify-content: center;
   top: 0;
   bottom: 0;
@@ -180,25 +181,26 @@ button {
 }
 
 .start {
-  background-color: #42475f;
-}
-
-.start a {
-  color: #fff;
+  background-color: #2d3f99;
 }
 
 .win {
-  background-color: #42475f;
-}
-
-.win a {
-  color: var(--color-win);
+  background-color: #2d3f99;
 }
 
 .lose {
-  background-color: #42475f;
+  background-color: #9b0d0d;
 }
 
-.lose a {
-  color: var(--color-lose);
+#game-over-message  {
+  font-size: 75px;
+  letter-spacing: 2px;
+  word-spacing: 0px;
+  color: #2c2b2b;
+  font-weight: 700;
+  text-decoration: none;
+  font-style: italic;
+  font-variant: normal;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 1px rgb(158, 155, 155)
 }

@@ -1,3 +1,4 @@
+
 // Runs resetDisplay function on start game button
 document.getElementById('btn__reset').addEventListener('click', resetDisplay);
 
@@ -9,13 +10,13 @@ for (let i = 0; i < qwerty.length; i++) {
 
 // The phrases to be used
 const phrase = [
-  'tis but a scratch',
+  'javascript',
   'you win',
   'you lose',
-  'oop',
-  'treehouse',
-  'unit four',
-  'is it over yet'
+  'html',
+  'css',
+  'quess',
+  'github'
 ];
 
 // Hides the start screen overlay, resets buttons and hearts

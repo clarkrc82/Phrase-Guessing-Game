@@ -4,12 +4,18 @@ class Game {
     this.phrases = phrases.map((phrase) => new Phrase(phrase))
   }
 
+/**
+* randomly retrieves one phrase from the array
+*/
   getRandomPhrase() {
     const phrase = this.phrases
     const thePhrase = phrase[Math.floor(Math.random() * phrase.length)]
     return thePhrase;
   }
 
+/**
+ * checks if pressed button is in the phrase
+ */
   handleInteraction(target) {
     event.target.disabled = true;
     if (this.phrases[0].checkLetter(target)) {
@@ -21,6 +27,9 @@ class Game {
     }
   }
 
+/**
+ * removes a life/heart from board.  ends game if out of lives
+ */
   removeLife() {
     const hearts = document.querySelectorAll('.tries img');
     this.missed++;
@@ -28,6 +37,9 @@ class Game {
     if (this.missed === 5) this.gameOver('lost');
   }
 
+/**
+ * checks to see if all letters have been found
+*/
   checkForWin() {
     const correctLetters = document.getElementsByClassName('correct')
     const letters = document.getElementsByClassName('letter')
@@ -42,6 +54,10 @@ class Game {
     }
   }
 
+/**
+ * displays win or lose message
+ * resets game - changes 'start' button to 'reset', removes phrase from display, resets scoreboard & keyboard
+ */
   gameOver(status) {
     const gameOverMessage = document.querySelector('#game-over-message');
     const overlay = document.querySelector('#overlay');
@@ -57,11 +73,14 @@ class Game {
     } else {
       overlay.style.display = 'flex';
       overlay.classList.add('lose');
-      gameOverMessage.textContent = 'You Lose!';
+      gameOverMessage.textContent = 'Game Over';
 
     }
   }
 
+/**
+ * calls getRandomPhrases and adds that phrase to the board.
+ */
   startGame() {
     const keys = document.querySelectorAll('.key')
     keys.forEach(key => {
